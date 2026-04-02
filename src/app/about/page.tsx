@@ -112,7 +112,7 @@ export default function AboutPage() {
             {/* Headshot */}
             <div className="relative aspect-[3/4] overflow-hidden bg-[#0b1220]">
               <Image
-                src="/Images/Vargo Headshot/NVargo HeadShot.jpg"
+                src="/Images/Vargo Headshot/generated-image (1).png"
                 alt="Nathan Vargo — Founder, Watershed Development Group"
                 fill
                 className="object-cover object-top"

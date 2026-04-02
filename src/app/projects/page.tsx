@@ -92,7 +92,9 @@ const projects = [
       "One of the fastest-growing US submarkets",
     ],
     color: "bg-[#162035]",
-    images: [] as string[],
+    images: [
+      "/Images/North Texas/subdivisions_files/unsplash-image-zBHU08hdzhY.jpg",
+    ],
   },
   {
     name: "Detroit Restoration",
