@@ -38,7 +38,7 @@ export default function AboutPage() {
       {/* Page hero */}
       <section className="bg-[#0b1220] pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Who We Are</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Who We Are</p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-tight max-w-3xl">
             Built on Purpose.<br />Driven by Results.
           </h1>
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Mission</p>
+            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Mission</p>
             <h2 className="text-4xl font-black text-[#0b1220] uppercase leading-tight mb-6">Our Philosophy</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
               We believe that community is about people. We believe in real estate that is well located, carefully designed, and that delivers both a lifestyle and a purpose.
@@ -62,12 +62,12 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-[#f5f5f5] p-10">
-            <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-6">Our Principles</p>
+          <div className="bg-[#EDF2F7] p-10">
+            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-6">Our Principles</p>
             <ul className="space-y-4">
               {values.map((v) => (
                 <li key={v} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#e87722] mt-0.5 shrink-0" />
+                  <CheckCircle size={18} className="text-[#0076B6] mt-0.5 shrink-0" />
                   <span className="text-gray-700 text-sm leading-relaxed">{v}</span>
                 </li>
               ))}
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <section className="py-20 bg-[#0b1220]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-14">
-            <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">About Watershed</p>
+            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">About Watershed</p>
             <h2 className="text-4xl font-black text-white uppercase leading-tight mb-6">
               A Coalition of Professionals
             </h2>
@@ -92,7 +92,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
             {focusAreas.map((area) => (
               <div key={area.title} className="bg-[#162035] p-8">
-                <div className="w-8 h-0.5 bg-[#e87722] mb-6" />
+                <div className="w-8 h-0.5 bg-[#0076B6] mb-6" />
                 <h3 className="text-white text-xl font-bold uppercase mb-4">{area.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{area.desc}</p>
               </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
       {/* Founder */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Leadership</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Leadership</p>
           <h2 className="text-4xl font-black text-[#0b1220] uppercase leading-tight mb-14">The Founder</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="bg-[#0b1220] aspect-[3/4] flex items-end p-6">
               <div>
                 <p className="text-white font-black text-2xl uppercase">Nathan &ldquo;Nate&rdquo; Vargo</p>
-                <p className="text-[#e87722] text-xs tracking-widest uppercase mt-1">Founder &amp; Developer</p>
+                <p className="text-[#0076B6] text-xs tracking-widest uppercase mt-1">Founder &amp; Developer</p>
               </div>
             </div>
 
@@ -121,7 +121,7 @@ export default function AboutPage() {
               <div className="flex items-center gap-4 mb-6">
                 <div>
                   <h3 className="text-2xl font-black text-[#0b1220] uppercase">Nathan &ldquo;Nate&rdquo; Vargo</h3>
-                  <p className="text-[#e87722] text-sm font-semibold uppercase tracking-widest">Founder &amp; Developer</p>
+                  <p className="text-[#0076B6] text-sm font-semibold uppercase tracking-widest">Founder &amp; Developer</p>
                 </div>
               </div>
 
@@ -145,7 +145,7 @@ export default function AboutPage() {
                   { value: "Texas", label: "Primary Market" },
                   { value: "All Asset Classes", label: "Experience" },
                 ].map((stat) => (
-                  <div key={stat.label} className="border-t-2 border-[#e87722] pt-3">
+                  <div key={stat.label} className="border-t-2 border-[#0076B6] pt-3">
                     <p className="font-black text-[#0b1220] text-lg">{stat.value}</p>
                     <p className="text-gray-500 text-xs uppercase tracking-wide mt-0.5">{stat.label}</p>
                   </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#e87722]">
+      <section className="py-20 bg-[#0076B6]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-black text-white uppercase mb-4">Ready to Work Together?</h2>
           <p className="text-white/80 mb-8 text-lg">Whether you&rsquo;re a developer, investor, or landowner — Watershed brings the expertise to move your project forward.</p>

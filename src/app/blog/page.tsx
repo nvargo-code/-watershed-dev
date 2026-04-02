@@ -19,7 +19,7 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="bg-[#0b1220] pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Market Intelligence</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Market Intelligence</p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-tight max-w-3xl mb-6">
             Development Insights
           </h1>
@@ -37,12 +37,12 @@ export default function BlogPage() {
               <div className="bg-[#0b1220] p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-[#e87722] text-white text-xs font-bold uppercase tracking-widest">
+                    <span className="px-3 py-1 bg-[#0076B6] text-white text-xs font-bold uppercase tracking-widest">
                       Featured
                     </span>
                     <span className="text-white/40 text-xs uppercase tracking-wider">{featured.category}</span>
                   </div>
-                  <h2 className="text-3xl lg:text-4xl font-black text-white uppercase leading-tight mb-4 group-hover:text-[#e87722] transition-colors">
+                  <h2 className="text-3xl lg:text-4xl font-black text-white uppercase leading-tight mb-4 group-hover:text-[#0076B6] transition-colors">
                     {featured.title}
                   </h2>
                   <p className="text-white/60 leading-relaxed mb-6">{featured.excerpt}</p>
@@ -52,7 +52,7 @@ export default function BlogPage() {
                   </div>
                 </div>
                 <div className="flex items-center justify-end">
-                  <div className="flex items-center gap-3 text-[#e87722] font-semibold uppercase tracking-wide text-sm">
+                  <div className="flex items-center gap-3 text-[#0076B6] font-semibold uppercase tracking-wide text-sm">
                     Read Article <ArrowRight size={16} />
                   </div>
                 </div>
@@ -64,9 +64,9 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <article className="bg-[#f5f5f5] p-8 h-full flex flex-col group-hover:bg-[#0b1220] transition-colors duration-300">
+                <article className="bg-[#EDF2F7] p-8 h-full flex flex-col group-hover:bg-[#0b1220] transition-colors duration-300">
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-[#e87722] text-xs font-semibold uppercase tracking-widest">{post.category}</span>
+                    <span className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest">{post.category}</span>
                   </div>
                   <h2 className="text-xl font-bold text-[#0b1220] group-hover:text-white uppercase leading-tight mb-3 transition-colors duration-300">
                     {post.title}
@@ -80,7 +80,7 @@ export default function BlogPage() {
                       <span className="mx-2">·</span>
                       {post.readTime}
                     </div>
-                    <div className="flex items-center gap-1 text-[#e87722] text-xs font-semibold uppercase">
+                    <div className="flex items-center gap-1 text-[#0076B6] text-xs font-semibold uppercase">
                       Read <ArrowRight size={10} />
                     </div>
                   </div>

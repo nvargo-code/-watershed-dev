@@ -23,7 +23,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight" onClick={() => setOpen(false)}>
           <span className="text-white font-bold text-lg tracking-wide uppercase">Watershed</span>
-          <span className="text-[#e87722] text-xs tracking-[0.2em] uppercase font-medium">Development Group</span>
+          <span className="text-[#0076B6] text-xs tracking-[0.2em] uppercase font-medium">Development Group</span>
         </Link>
 
         {/* Desktop nav */}
@@ -34,7 +34,7 @@ export default function Header() {
               href={link.href}
               className={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 ${
                 pathname === link.href
-                  ? "text-[#e87722]"
+                  ? "text-[#0076B6]"
                   : "text-white/80 hover:text-white"
               }`}
             >
@@ -43,7 +43,7 @@ export default function Header() {
           ))}
           <Link
             href="/contact"
-            className="ml-4 px-5 py-2 bg-[#e87722] hover:bg-[#d0681a] text-white text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
+            className="ml-4 px-5 py-2 bg-[#0076B6] hover:bg-[#005F94] text-white text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
           >
             Start a Project
           </Link>
@@ -68,7 +68,7 @@ export default function Header() {
               href={link.href}
               onClick={() => setOpen(false)}
               className={`text-sm font-medium tracking-wide uppercase ${
-                pathname === link.href ? "text-[#e87722]" : "text-white/80"
+                pathname === link.href ? "text-[#0076B6]" : "text-white/80"
               }`}
             >
               {link.label}
@@ -77,7 +77,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="mt-2 px-5 py-3 bg-[#e87722] text-white text-sm font-semibold tracking-wide uppercase text-center"
+            className="mt-2 px-5 py-3 bg-[#0076B6] text-white text-sm font-semibold tracking-wide uppercase text-center"
           >
             Start a Project
           </Link>

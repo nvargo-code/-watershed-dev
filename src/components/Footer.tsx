@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0b1220] text-white">
       {/* Acquisition banner */}
-      <div className="bg-[#e87722] px-6 py-4">
+      <div className="bg-[#0076B6] px-6 py-4">
         <p className="max-w-7xl mx-auto text-center text-sm font-semibold tracking-wide">
           Watershed Development Group is currently acquiring new projects.{" "}
           <Link href="/contact?subject=NEW PROJECT" className="underline hover:no-underline font-bold">
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="space-y-4">
           <div>
             <p className="font-bold text-xl tracking-wide uppercase">Watershed</p>
-            <p className="text-[#e87722] text-xs tracking-[0.2em] uppercase font-medium">Development Group</p>
+            <p className="text-[#0076B6] text-xs tracking-[0.2em] uppercase font-medium">Development Group</p>
           </div>
           <p className="text-white/60 text-sm leading-relaxed max-w-xs">
             A coalition of professionals dedicated to making a meaningful difference for our communities and our investors.
@@ -39,7 +39,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e87722] mb-5">Services</h4>
+          <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0076B6] mb-5">Services</h4>
           <ul className="space-y-2">
             {services.map((s) => (
               <li key={s}>
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Links + Newsletter */}
         <div className="space-y-8">
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e87722] mb-5">Company</h4>
+            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0076B6] mb-5">Company</h4>
             <ul className="space-y-2">
               {[
                 { label: "About", href: "/about" },
@@ -73,17 +73,17 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e87722] mb-3">Market Insights</h4>
+            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0076B6] mb-3">Market Insights</h4>
             <p className="text-white/50 text-xs mb-3">Get Austin & DFW development updates delivered to your inbox.</p>
             <form className="flex gap-2">
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 bg-white/10 border border-white/20 px-3 py-2 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#e87722]"
+                className="flex-1 bg-white/10 border border-white/20 px-3 py-2 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#0076B6]"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#e87722] hover:bg-[#d0681a] text-white text-sm font-semibold uppercase tracking-wide transition-colors"
+                className="px-4 py-2 bg-[#0076B6] hover:bg-[#005F94] text-white text-sm font-semibold uppercase tracking-wide transition-colors"
               >
                 Join
               </button>

@@ -105,7 +105,7 @@ export default function ProjectsPage() {
       {/* Hero */}
       <section className="bg-[#0b1220] pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Track Record</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Track Record</p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-tight max-w-3xl mb-6">
             Projects
           </h1>
@@ -116,7 +116,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-[#e87722]">
+      <section className="bg-[#0076B6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { v: "$500M+", l: "Assets Developed" },
@@ -139,11 +139,11 @@ export default function ProjectsPage() {
             <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-[#e87722] text-white text-xs font-bold uppercase tracking-widest">{project.tag}</span>
+                  <span className="px-3 py-1 bg-[#0076B6] text-white text-xs font-bold uppercase tracking-widest">{project.tag}</span>
                   <span className="text-white/40 text-xs uppercase tracking-wider">{project.status}</span>
                 </div>
                 <h2 className="text-4xl font-black text-white uppercase leading-tight mb-2">{project.name}</h2>
-                <p className="text-[#e87722] text-sm font-semibold uppercase tracking-widest mb-4">{project.headline}</p>
+                <p className="text-[#0076B6] text-sm font-semibold uppercase tracking-widest mb-4">{project.headline}</p>
                 <div className="flex items-center gap-2 text-white/40 text-xs mb-6">
                   <MapPin size={12} /> {project.location}
                 </div>
@@ -157,7 +157,7 @@ export default function ProjectsPage() {
                   <ul className="space-y-2">
                     {project.highlights.map((h) => (
                       <li key={h} className="flex items-start gap-3 text-white/60 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#e87722] mt-1.5 shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#0076B6] mt-1.5 shrink-0" />
                         {h}
                       </li>
                     ))}
@@ -170,7 +170,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-[#e87722]">
+      <section className="py-24 bg-[#0076B6]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-black text-white uppercase mb-4">Have a Property to Discuss?</h2>
           <p className="text-white/80 text-lg mb-8">

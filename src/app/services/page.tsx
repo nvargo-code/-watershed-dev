@@ -129,7 +129,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="bg-[#0b1220] pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">What We Offer</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">What We Offer</p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-tight max-w-3xl mb-6">
             Development Consulting Services
           </h1>
@@ -146,22 +146,22 @@ export default function ServicesPage() {
             <div key={svc.title} className={`py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#e87722] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-[#0076B6] flex items-center justify-center shrink-0">
                     <svc.icon size={22} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-[#e87722] text-xs font-semibold uppercase tracking-widest">{svc.tagline}</p>
+                    <p className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest">{svc.tagline}</p>
                   </div>
                 </div>
                 <h2 className="text-3xl font-black text-[#0b1220] uppercase leading-tight mb-5">{svc.title}</h2>
                 <p className="text-gray-600 leading-relaxed">{svc.desc}</p>
               </div>
-              <div className="bg-[#f5f5f5] p-8">
+              <div className="bg-[#EDF2F7] p-8">
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0b1220] mb-5">Services Include</p>
                 <ul className="space-y-3">
                   {svc.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm text-gray-600">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#e87722] mt-2 shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#0076B6] mt-2 shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -175,7 +175,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-24 bg-[#0b1220]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Get Started</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Get Started</p>
           <h2 className="text-4xl sm:text-5xl font-black text-white uppercase leading-tight mb-6">
             Let&rsquo;s Talk About Your Project
           </h2>
@@ -184,7 +184,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#e87722] hover:bg-[#d0681a] text-white font-semibold uppercase tracking-wide transition-colors"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#0076B6] hover:bg-[#005F94] text-white font-semibold uppercase tracking-wide transition-colors"
           >
             Contact Us <ArrowRight size={16} />
           </Link>

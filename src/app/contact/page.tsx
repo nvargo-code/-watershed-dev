@@ -22,7 +22,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="bg-[#0b1220] pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Get in Touch</p>
+          <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Get in Touch</p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white uppercase leading-tight max-w-3xl">
             Let&rsquo;s Build Something Together
           </h1>
@@ -34,7 +34,7 @@ export default function ContactPage() {
           {/* Info */}
           <div>
             <div className="mb-10">
-              <p className="text-[#e87722] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Watershed Development Group</p>
+              <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Watershed Development Group</p>
               <h2 className="text-3xl font-black text-[#0b1220] uppercase leading-tight mb-5">
                 Actively Acquiring New Projects
               </h2>
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#e87722] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 bg-[#0076B6] flex items-center justify-center shrink-0">
                   <MapPin size={18} className="text-white" />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-10 p-6 bg-[#f5f5f5] border-l-4 border-[#e87722]">
+            <div className="mt-10 p-6 bg-[#EDF2F7] border-l-4 border-[#0076B6]">
               <p className="text-sm font-semibold text-[#0b1220] uppercase tracking-wide mb-2">Acquisition Inquiries</p>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Please use subject line <strong>&ldquo;NEW PROJECT&rdquo;</strong> for any property or development opportunity you&rsquo;d like us to evaluate.
@@ -71,7 +71,7 @@ export default function ContactPage() {
           <div>
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                <CheckCircle size={56} className="text-[#e87722] mb-6" />
+                <CheckCircle size={56} className="text-[#0076B6] mb-6" />
                 <h3 className="text-2xl font-black text-[#0b1220] uppercase mb-3">Message Received</h3>
                 <p className="text-gray-600 max-w-sm leading-relaxed">
                   Thank you for reaching out. A member of the Watershed team will be in touch with you shortly.
@@ -88,7 +88,7 @@ export default function ContactPage() {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#e87722] transition-colors"
+                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#0076B6] transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
@@ -100,7 +100,7 @@ export default function ContactPage() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#e87722] transition-colors"
+                      className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#0076B6] transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                     required
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#e87722] transition-colors bg-white"
+                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#0076B6] transition-colors bg-white"
                   >
                     <option value="">Select a subject</option>
                     <option value="NEW PROJECT">NEW PROJECT — Property/Acquisition Inquiry</option>
@@ -131,14 +131,14 @@ export default function ContactPage() {
                     rows={6}
                     value={form.message}
                     onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#e87722] transition-colors resize-none"
+                    className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[#0076B6] transition-colors resize-none"
                     placeholder="Tell us about your project or inquiry..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#e87722] hover:bg-[#d0681a] text-white font-semibold uppercase tracking-wide transition-colors text-sm"
+                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#0076B6] hover:bg-[#005F94] text-white font-semibold uppercase tracking-wide transition-colors text-sm"
                 >
                   Send Message <Send size={15} />
                 </button>
