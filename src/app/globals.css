@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b1220;
+  --navy-mid: #162035;
+  --orange: #e87722;
+  --orange-hover: #d0681a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+/* Prose styles for blog posts */
+.prose h1 { font-size: 2rem; font-weight: 800; margin: 2rem 0 1rem; color: #0b1220; }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 0.75rem; color: #0b1220; padding-bottom: 0.5rem; border-bottom: 2px solid #e87722; }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #162035; }
+.prose p { margin: 1rem 0; line-height: 1.8; color: #374151; }
+.prose ul { margin: 1rem 0; padding-left: 1.5rem; list-style: disc; }
+.prose ol { margin: 1rem 0; padding-left: 1.5rem; list-style: decimal; }
+.prose li { margin: 0.5rem 0; line-height: 1.7; color: #374151; }
+.prose strong { font-weight: 700; color: #0b1220; }
+.prose a { color: #e87722; text-decoration: underline; }
+.prose a:hover { color: #d0681a; }
+.prose blockquote { border-left: 4px solid #e87722; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #4b5563; }
