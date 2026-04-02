@@ -51,17 +51,20 @@ export default function Home() {
       {/* Hero — video background */}
       <section className="relative h-screen min-h-[640px] flex items-center overflow-hidden bg-[#0b1220]">
 
-        {/* Background video — drop hero.mp4 into /public/videos/ to activate */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/hero-poster.jpg"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        {/* YouTube background video */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <iframe
+            src="https://www.youtube.com/embed/O9F4rXp1Ogc?autoplay=1&mute=1&loop=1&playlist=O9F4rXp1Ogc&controls=0&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+            allow="autoplay; encrypted-media"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-0 pointer-events-none"
+            style={{
+              width: "100vw",
+              height: "56.25vw",   /* maintain 16:9 — grows wider than viewport */
+              minHeight: "100vh",
+              minWidth: "177.78vh", /* maintain 16:9 — grows taller than viewport */
+            }}
+          />
+        </div>
 
         {/* Diagonal dark overlay — heavy top-left, fades bottom-right (Turner pattern) */}
         <div
