@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, TrendingUp, MapPin, Award, Users } from "lucide-react";
 import { getAllPosts } from "@/src/lib/blog";
 
@@ -218,16 +219,28 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
             {[
-              { name: "6th & Chicon", type: "Hospitality / New Construction", loc: "East Austin, TX", tag: "60-Key Hotel" },
-              { name: "Kramer", type: "Creative Covered Land", loc: "North Austin, TX", tag: "7x+ Equity Multiple" },
-              { name: "North Texas Subdivisions", type: "Single-Family Lot Development", loc: "Grayson & Collin County, TX", tag: "Vertically Integrated" },
+              { name: "6th & Chicon", type: "Hospitality / New Construction", loc: "East Austin, TX", tag: "60-Key Hotel", img: "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-1_wr7rhi.jpg" },
+              { name: "Kramer", type: "Creative Covered Land", loc: "North Austin, TX", tag: "7x+ Equity Multiple", img: "/Images/Kramer/DJI_0339.jpg" },
+              { name: "North Texas Subdivisions", type: "Single-Family Lot Development", loc: "Grayson & Collin County, TX", tag: "Vertically Integrated", img: "/Images/North Texas/subdivisions_files/unsplash-image-zBHU08hdzhY.jpg" },
             ].map((p) => (
-              <div key={p.name} className="bg-[#162035] p-8 group hover:bg-[#0076B6] transition-colors duration-300 cursor-pointer">
-                <p className="text-[#0076B6] group-hover:text-white/80 text-xs uppercase tracking-widest mb-4 transition-colors">{p.tag}</p>
-                <h3 className="text-white text-2xl font-black uppercase mb-2">{p.name}</h3>
-                <p className="text-white/50 group-hover:text-white/80 text-sm mb-1 transition-colors">{p.type}</p>
-                <div className="flex items-center gap-1 text-white/40 group-hover:text-white/70 text-xs transition-colors">
-                  <MapPin size={12} />{p.loc}
+              <div key={p.name} className="bg-[#162035] group hover:bg-[#0076B6] transition-colors duration-300 cursor-pointer overflow-hidden">
+                <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                  <Image
+                    src={p.img}
+                    alt={p.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-[#0b1220]/40 group-hover:bg-[#0076B6]/30 transition-colors duration-300" />
+                </div>
+                <div className="p-8">
+                  <p className="text-[#0076B6] group-hover:text-white/80 text-xs uppercase tracking-widest mb-4 transition-colors">{p.tag}</p>
+                  <h3 className="text-white text-2xl font-black uppercase mb-2">{p.name}</h3>
+                  <p className="text-white/50 group-hover:text-white/80 text-sm mb-1 transition-colors">{p.type}</p>
+                  <div className="flex items-center gap-1 text-white/40 group-hover:text-white/70 text-xs transition-colors">
+                    <MapPin size={12} />{p.loc}
+                  </div>
                 </div>
               </div>
             ))}
