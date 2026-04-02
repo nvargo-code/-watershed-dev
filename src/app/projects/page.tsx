@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -25,6 +26,11 @@ const projects = [
       "Spring 2025 completion",
     ],
     color: "bg-[#162035]",
+    images: [
+      "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-1_wr7rhi.jpg",
+      "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-14_yjp1ac.jpg",
+      "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-16_vtg8k5.jpg",
+    ],
   },
   {
     name: "Kramer",
@@ -43,6 +49,11 @@ const projects = [
       "Sold 2023",
     ],
     color: "bg-[#1a2540]",
+    images: [
+      "/Images/Kramer/DJI_0339.jpg",
+      "/Images/Kramer/Drone Image_showing Domain and Soccer Staduim.jpg",
+      "/Images/Kramer/Drone Image_showing Downtown Austin.jpg",
+    ],
   },
   {
     name: "Sylvan",
@@ -60,6 +71,9 @@ const projects = [
       "Subdivision creation business plan",
     ],
     color: "bg-[#0f1d35]",
+    images: [
+      "/Images/Sylvan/60f3dfc58364efe47601560dc9a5c19e.jpg",
+    ],
   },
   {
     name: "North Texas Subdivisions",
@@ -78,6 +92,7 @@ const projects = [
       "One of the fastest-growing US submarkets",
     ],
     color: "bg-[#162035]",
+    images: [] as string[],
   },
   {
     name: "Detroit Restoration",
@@ -96,6 +111,10 @@ const projects = [
       "Moderate value-add business plan",
     ],
     color: "bg-[#1a2540]",
+    images: [
+      "/Images/Detroit/Front Preferred.png",
+      "/Images/Detroit/Front Steps.jpg",
+    ],
   },
 ];
 
@@ -148,6 +167,27 @@ export default function ProjectsPage() {
                   <MapPin size={12} /> {project.location}
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed">{project.type}</p>
+
+                {/* Photo grid */}
+                {project.images.length > 0 && (
+                  <div className="mt-8 grid grid-cols-2 gap-2">
+                    {project.images.slice(0, 4).map((src, idx) => (
+                      <div
+                        key={src}
+                        className={`relative overflow-hidden ${idx === 0 && project.images.length >= 3 ? "col-span-2" : ""}`}
+                        style={{ aspectRatio: idx === 0 && project.images.length >= 3 ? "16/7" : "4/3" }}
+                      >
+                        <Image
+                          src={src}
+                          alt={`${project.name} — photo ${idx + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
