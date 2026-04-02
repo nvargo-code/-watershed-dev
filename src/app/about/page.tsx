@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -108,10 +109,18 @@ export default function AboutPage() {
           <h2 className="text-4xl font-black text-[#0b1220] uppercase leading-tight mb-14">The Founder</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            {/* Photo placeholder */}
-            <div className="bg-[#0b1220] aspect-[3/4] flex items-end p-6">
-              <div>
-                <p className="text-white font-black text-2xl uppercase">Nathan &ldquo;Nate&rdquo; Vargo</p>
+            {/* Headshot */}
+            <div className="relative aspect-[3/4] overflow-hidden bg-[#0b1220]">
+              <Image
+                src="/Images/Vargo Headshot/NVargo HeadShot.jpg"
+                alt="Nathan Vargo — Founder, Watershed Development Group"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#0b1220] to-transparent">
+                <p className="text-white font-black text-xl uppercase">Nathan &ldquo;Nate&rdquo; Vargo</p>
                 <p className="text-[#0076B6] text-xs tracking-widest uppercase mt-1">Founder &amp; Developer</p>
               </div>
             </div>
