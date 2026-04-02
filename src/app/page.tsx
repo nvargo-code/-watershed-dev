@@ -48,30 +48,54 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center bg-[#0b1220] overflow-hidden">
-        {/* Geometric accent */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-[60vw] h-full bg-gradient-to-l from-[#162035] to-transparent opacity-60" />
-          <div className="absolute bottom-0 left-0 w-96 h-1 bg-[#0076B6]" />
-          <div className="absolute top-1/2 right-[10%] w-px h-48 bg-[#0076B6]/30" />
-          <div className="absolute top-1/4 right-[30%] w-2 h-2 rounded-full bg-[#0076B6]/40" />
-        </div>
+      {/* Hero — video background */}
+      <section className="relative h-screen min-h-[640px] flex items-center overflow-hidden bg-[#0b1220]">
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-24">
-          <div className="max-w-4xl">
-            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-6">
+        {/* Background video — drop hero.mp4 into /public/videos/ to activate */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/images/hero-poster.jpg"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Diagonal dark overlay — heavy top-left, fades bottom-right (Turner pattern) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(165deg, rgba(7,14,26,0.82) 0%, rgba(11,18,32,0.65) 45%, rgba(11,18,32,0.30) 100%)",
+          }}
+        />
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0b1220] to-transparent" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[1600px] mx-auto px-8 lg:px-14 pt-36 pb-24 w-full">
+          <div className="max-w-3xl hero-content">
+            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.4em] uppercase mb-7 hero-fade-up" style={{ animationDelay: "0.1s" }}>
               Austin &bull; Dallas–Fort Worth
             </p>
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black text-white leading-[0.95] mb-8 uppercase tracking-tight">
+            <h1
+              className="text-5xl sm:text-6xl lg:text-[5.5vw] xl:text-[5rem] font-black text-white leading-[0.92] mb-8 uppercase tracking-tight hero-fade-up"
+              style={{ animationDelay: "0.25s" }}
+            >
               We Live for<br />
               <span className="text-[#0076B6]">Groundbreaking</span><br />
               Moments
             </h1>
-            <p className="text-white/60 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10">
-              Watershed Development Group is a coalition of real estate professionals delivering expert development consulting services across Texas&rsquo;s most dynamic markets.
+            <p
+              className="text-white/65 text-lg sm:text-xl max-w-xl leading-relaxed mb-10 hero-fade-up"
+              style={{ animationDelay: "0.45s" }}
+            >
+              A coalition of real estate professionals delivering full-lifecycle development consulting across Texas&rsquo;s most dynamic markets.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 hero-fade-up" style={{ animationDelay: "0.6s" }}>
               <Link
                 href="/services"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#0076B6] hover:bg-[#005F94] text-white font-semibold uppercase tracking-wide text-sm transition-colors duration-200"
@@ -89,9 +113,9 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
-          <div className="w-px h-12 bg-white/20" />
-          <p className="text-xs tracking-widest uppercase">Scroll</p>
+        <div className="absolute bottom-8 right-14 hidden lg:flex flex-col items-center gap-3 text-white/30">
+          <p className="text-[10px] tracking-[0.3em] uppercase" style={{ writingMode: "vertical-rl" }}>Scroll</p>
+          <div className="w-px h-16 bg-white/20 scroll-line" />
         </div>
       </section>
 
