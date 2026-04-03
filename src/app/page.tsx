@@ -219,7 +219,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
             {[
-              { name: "6th & Chicon", type: "Hospitality / New Construction", loc: "East Austin, TX", tag: "60-Key Hotel", img: "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-1_wr7rhi.jpg" },
+              { name: "Studio Haus", type: "Hospitality / New Construction", loc: "East Austin, TX", tag: "60-Key Hotel", img: "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-21_ib5xrr.jpg" },
               { name: "Kramer", type: "Creative Covered Land", loc: "North Austin, TX", tag: "7x+ Equity Multiple", img: "/Images/Kramer/DJI_0339.jpg" },
               { name: "North Texas Subdivisions", type: "Single-Family Lot Development", loc: "Grayson & Collin County, TX", tag: "Vertically Integrated", img: "/Images/North Texas/subdivisions_files/unsplash-image-zBHU08hdzhY.jpg" },
             ].map((p) => (

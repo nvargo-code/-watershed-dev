@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    name: "6th & Chicon",
+    name: "Studio Haus",
     headline: "Cutting-Edge Hospitality",
     type: "Hospitality — New Construction",
     location: "East 6th Street Transit Oriented District, Austin, TX",
@@ -27,7 +27,7 @@ const projects = [
     ],
     color: "bg-[#162035]",
     images: [
-      "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-1_wr7rhi.jpg",
+      "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-21_ib5xrr.jpg",
       "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-14_yjp1ac.jpg",
       "/Images/6th and Chicon/Studio_Haus_Amenities_Exterior-16_vtg8k5.jpg",
     ],
