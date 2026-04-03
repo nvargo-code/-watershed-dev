@@ -72,7 +72,10 @@ const projects = [
     ],
     color: "bg-[#0f1d35]",
     images: [
+      "/Images/Sylvan/DJI_0015.JPG",
+      "/Images/Sylvan/Picture1.jpg",
       "/Images/Sylvan/60f3dfc58364efe47601560dc9a5c19e.jpg",
+      "/Images/Sylvan/Subdivision.png",
     ],
   },
   {
@@ -93,7 +96,10 @@ const projects = [
     ],
     color: "bg-[#162035]",
     images: [
+      "/Images/North Texas/Laural Creek.webp",
+      "/Images/North Texas/subdivisions_files/Fresh-Front.jpg",
       "/Images/North Texas/subdivisions_files/unsplash-image-zBHU08hdzhY.jpg",
+      "/Images/North Texas/subdivisions_files/unsplash-image-2gDwlIim3Uw.jpg",
     ],
   },
   {
@@ -115,7 +121,9 @@ const projects = [
     color: "bg-[#1a2540]",
     images: [
       "/Images/Detroit/Front Preferred.png",
-      "/Images/Detroit/Front Steps.jpg",
+      "/Images/Detroit/Photo Aug 11, 4 12 38 PM.png",
+      "/Images/Detroit/Brick-work.jpg",
+      "/Images/Detroit/Shower.jpg",
     ],
   },
 ];

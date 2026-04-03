@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Clock, ArrowRight } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/src/lib/blog";
@@ -42,8 +43,21 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0b1220] pt-40 pb-16">
-        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+      <section className="bg-[#0b1220] pt-40 pb-16 relative overflow-hidden">
+        {post.image && (
+          <div className="absolute inset-0">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover opacity-20"
+              sizes="100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0b1220]/80 to-[#0b1220]" />
+          </div>
+        )}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-10">
           <Link href="/blog" className="inline-flex items-center gap-2 text-white/40 hover:text-white text-xs uppercase tracking-widest mb-8 transition-colors">
             <ArrowLeft size={12} /> All Insights
           </Link>

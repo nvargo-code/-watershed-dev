@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Clock } from "lucide-react";
 import { getAllPosts } from "@/src/lib/blog";
 
@@ -34,8 +35,20 @@ export default function BlogPage() {
           {/* Featured post */}
           {featured && (
             <Link href={`/blog/${featured.slug}`} className="group block mb-16">
-              <div className="bg-[#0b1220] p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                <div>
+              <div className="bg-[#0b1220] grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                {featured.image && (
+                  <div className="relative w-full overflow-hidden" style={{ minHeight: "280px" }}>
+                    <Image
+                      src={featured.image}
+                      alt={featured.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-[#0b1220]/30" />
+                  </div>
+                )}
+                <div className={`p-10 lg:p-14 flex flex-col justify-center ${!featured.image ? "lg:col-span-2" : ""}`}>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-[#0076B6] text-white text-xs font-bold uppercase tracking-widest">
                       Featured
@@ -46,12 +59,10 @@ export default function BlogPage() {
                     {featured.title}
                   </h2>
                   <p className="text-white/60 leading-relaxed mb-6">{featured.excerpt}</p>
-                  <div className="flex items-center gap-4 text-white/30 text-xs">
+                  <div className="flex items-center gap-4 text-white/30 text-xs mb-6">
                     <span>{new Date(featured.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                     <span className="flex items-center gap-1"><Clock size={10} /> {featured.readTime}</span>
                   </div>
-                </div>
-                <div className="flex items-center justify-end">
                   <div className="flex items-center gap-3 text-[#0076B6] font-semibold uppercase tracking-wide text-sm">
                     Read Article <ArrowRight size={16} />
                   </div>
@@ -64,24 +75,38 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <article className="bg-[#EDF2F7] p-8 h-full flex flex-col group-hover:bg-[#0b1220] transition-colors duration-300">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest">{post.category}</span>
-                  </div>
-                  <h2 className="text-xl font-bold text-[#0b1220] group-hover:text-white uppercase leading-tight mb-3 transition-colors duration-300">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-500 group-hover:text-white/50 text-sm leading-relaxed flex-1 line-clamp-4 transition-colors duration-300">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-6 pt-4 border-t border-gray-200 group-hover:border-white/10 flex items-center justify-between transition-colors duration-300">
-                    <div className="text-gray-400 group-hover:text-white/30 text-xs transition-colors">
-                      {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                      <span className="mx-2">·</span>
-                      {post.readTime}
+                <article className="bg-[#EDF2F7] h-full flex flex-col group-hover:bg-[#0b1220] transition-colors duration-300 overflow-hidden">
+                  {post.image && (
+                    <div className="relative w-full overflow-hidden shrink-0" style={{ aspectRatio: "16/9" }}>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-[#0b1220]/10 group-hover:bg-[#0076B6]/20 transition-colors duration-300" />
                     </div>
-                    <div className="flex items-center gap-1 text-[#0076B6] text-xs font-semibold uppercase">
-                      Read <ArrowRight size={10} />
+                  )}
+                  <div className="p-8 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest">{post.category}</span>
+                    </div>
+                    <h2 className="text-xl font-bold text-[#0b1220] group-hover:text-white uppercase leading-tight mb-3 transition-colors duration-300">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-500 group-hover:text-white/50 text-sm leading-relaxed flex-1 line-clamp-4 transition-colors duration-300">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-6 pt-4 border-t border-gray-200 group-hover:border-white/10 flex items-center justify-between transition-colors duration-300">
+                      <div className="text-gray-400 group-hover:text-white/30 text-xs transition-colors">
+                        {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                        <span className="mx-2">·</span>
+                        {post.readTime}
+                      </div>
+                      <div className="flex items-center gap-1 text-[#0076B6] text-xs font-semibold uppercase">
+                        Read <ArrowRight size={10} />
+                      </div>
                     </div>
                   </div>
                 </article>

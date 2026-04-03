@@ -10,6 +10,7 @@ export interface Post {
   excerpt: string;
   author: string;
   readTime: string;
+  image?: string;
   content: string;
 }
 
@@ -31,6 +32,7 @@ export function getAllPosts(): Post[] {
         excerpt: data.excerpt,
         author: data.author ?? "Watershed Development Group",
         readTime: data.readTime ?? "8 min read",
+        image: data.image,
         content,
       };
     })
@@ -50,6 +52,7 @@ export function getPostBySlug(slug: string): Post | undefined {
     excerpt: data.excerpt,
     author: data.author ?? "Watershed Development Group",
     readTime: data.readTime ?? "8 min read",
+    image: data.image,
     content,
   };
 }

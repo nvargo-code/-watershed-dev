@@ -273,12 +273,25 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                  <div className="bg-[#EDF2F7] p-8 h-full group-hover:bg-[#0b1220] transition-colors duration-300">
-                    <p className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest mb-3">{post.category}</p>
-                    <h3 className="text-[#0b1220] group-hover:text-white font-bold text-lg leading-snug mb-3 transition-colors duration-300">{post.title}</h3>
-                    <p className="text-gray-500 group-hover:text-white/50 text-sm leading-relaxed line-clamp-3 transition-colors duration-300">{post.excerpt}</p>
-                    <div className="mt-6 flex items-center gap-2 text-[#0076B6] text-xs font-semibold uppercase tracking-wide">
-                      Read More <ArrowRight size={12} />
+                  <div className="bg-[#EDF2F7] h-full flex flex-col group-hover:bg-[#0b1220] transition-colors duration-300 overflow-hidden">
+                    {post.image && (
+                      <div className="relative w-full shrink-0 overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+                    )}
+                    <div className="p-8 flex flex-col flex-1">
+                      <p className="text-[#0076B6] text-xs font-semibold uppercase tracking-widest mb-3">{post.category}</p>
+                      <h3 className="text-[#0b1220] group-hover:text-white font-bold text-lg leading-snug mb-3 transition-colors duration-300">{post.title}</h3>
+                      <p className="text-gray-500 group-hover:text-white/50 text-sm leading-relaxed line-clamp-3 transition-colors duration-300">{post.excerpt}</p>
+                      <div className="mt-6 flex items-center gap-2 text-[#0076B6] text-xs font-semibold uppercase tracking-wide">
+                        Read More <ArrowRight size={12} />
+                      </div>
                     </div>
                   </div>
                 </Link>
