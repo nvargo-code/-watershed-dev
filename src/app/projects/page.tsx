@@ -125,6 +125,7 @@ const projects = [
       "/Images/Detroit/Photo Aug 11, 4 12 38 PM.png",
       "/Images/Detroit/Shower.jpg",
     ],
+    imagePositions: ["center", "top", "center", "center", "center"],
   },
 ];
 
@@ -192,6 +193,7 @@ export default function ProjectsPage() {
                           alt={`${project.name} — photo ${idx + 1}`}
                           fill
                           className="object-cover"
+                          style={{ objectPosition: project.imagePositions?.[idx] ?? "center" }}
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       </div>
