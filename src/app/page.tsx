@@ -166,6 +166,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI Workflow */}
+      <section className="py-24 bg-[#0b1220]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-[#0076B6] text-xs font-semibold tracking-[0.3em] uppercase mb-4">How We Work</p>
+            <h2 className="text-4xl lg:text-5xl font-black text-white uppercase leading-tight mb-6">
+              An AI-Powered Workflow Built for Real Estate Development
+            </h2>
+            <p className="text-white/60 text-lg leading-relaxed mb-4">
+              Faster answers. Sharper analysis. Smoother deals.
+            </p>
+            <p className="text-white/50 leading-relaxed">
+              From feasibility and market research to financial modeling, document review, and pitch deck creation — every phase of our workflow is accelerated by AI. That means faster turnarounds, more precise analysis, and a smoother client experience from first conversation to final deliverable.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { label: "Feasibility Analysis" },
+              { label: "Market Research" },
+              { label: "Financial Modeling" },
+              { label: "Document Review" },
+              { label: "Pitch Deck Creation" },
+              { label: "Entitlement Research" },
+            ].map((item) => (
+              <div key={item.label} className="border border-white/10 p-5 hover:border-[#0076B6] transition-colors duration-300">
+                <div className="w-6 h-0.5 bg-[#0076B6] mb-3" />
+                <p className="text-white text-sm font-semibold uppercase tracking-wide">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About / Mission */}
       <section className="py-24 bg-[#EDF2F7]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

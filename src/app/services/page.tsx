@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BarChart2, DollarSign, Search, FileText, HardHat, Percent, Building2, Layers } from "lucide-react";
+import { ArrowRight, BarChart2, DollarSign, Search, FileText, HardHat, Percent, Building2, Layers, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -105,6 +105,20 @@ const services = [
       "Recapitalization analysis",
       "Disposition strategy and marketing coordination",
       "Portfolio performance monitoring",
+    ],
+  },
+  {
+    icon: Cpu,
+    title: "AI Workflow Consulting",
+    tagline: "Cutting-edge efficiency on every engagement",
+    desc: "Watershed's entire development process runs on an AI-powered workflow — accelerating feasibility analysis, market research, financial modeling, document review, and pitch deck creation. For clients looking to build the same edge into their own operations, we offer AI workflow consulting as a standalone service, helping real estate firms integrate modern AI tools into their day-to-day processes.",
+    bullets: [
+      "AI-accelerated document review and data extraction",
+      "Pitch deck and investor memo production",
+      "Feasibility and market research acceleration",
+      "Financial modeling workflow optimization",
+      "Email and calendar automation setup",
+      "Custom AI tool implementation",
     ],
   },
   {
